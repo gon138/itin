@@ -1,0 +1,10 @@
+// Place all the styles related to the itineraries controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.itinerary, .partnerlist {
+	float: left; margin: 10px; border: 1px solid gray; padding: 20px;
+}
+
+.itinerary {
+	width: 200px;
+}

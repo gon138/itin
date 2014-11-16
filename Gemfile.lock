@@ -32,6 +32,8 @@ GEM
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
       rack (>= 0.9.0)
+    binding_of_caller (0.7.3.pre1)
+      debug_inspector (>= 0.0.1)
     builder (3.1.4)
     byebug (3.5.1)
       columnize (~> 0.8)
@@ -54,6 +56,7 @@ GEM
       execjs
     coffee-script-source (1.8.0)
     columnize (0.8.9)
+    debug_inspector (0.0.2)
     debugger-linecache (1.2.0)
     diff-lcs (1.2.5)
     erubis (2.7.0)
@@ -75,6 +78,7 @@ GEM
       guard (~> 2.1)
       rspec (>= 2.14, < 4.0)
     hike (1.2.3)
+    hirb (0.7.2)
     hitimes (1.2.2)
     i18n (0.6.11)
     jbuilder (1.5.3)
@@ -208,10 +212,12 @@ PLATFORMS
 DEPENDENCIES
   awesome_print
   better_errors
+  binding_of_caller
   capybara
   coffee-rails (~> 4.0.0)
   factory_girl_rails
   guard-rspec
+  hirb
   jbuilder (~> 1.2)
   jquery-rails
   launchy

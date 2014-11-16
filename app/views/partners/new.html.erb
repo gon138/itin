@@ -1,0 +1,5 @@
+<%= form_for @partner do |f| %>
+<%= f.text_field(:name, placeholder: 'Name', autofocus: true) %>
+<%= f.select(:gender, [['Male',1],['Female',2]]) %>
+<%= f.submit %>
+<% end %>

@@ -1,0 +1,8 @@
+<%= form_for @itinerary do |f| %>
+<%= f.text_field(:name, placeholder: 'Trip Name') %>
+<%= f.text_field(:origin, placeholder: 'Origin') %>
+<%= f.text_field(:destination, placeholder: 'Destination') %>
+<%= f.date_field(:departure, placeholder: 'Departure Date') %>
+<%= f.date_field(:return, placeholder: 'Return Date') %>
+<%= f.submit %>
+<% end %>

@@ -1,0 +1,42 @@
+<span>Itinerary Index</span>   
+<%= link_to 'New itinerary', new_itinerary_path %>
+<br>
+<div class="col-xs-3 partnerlist">
+Partners: <br>
+<% @partners.each do |p| %>
+<%= link_to p.name, edit_partner_path(p) %> <br>
+<% end %>
+<%= button_to 'Add', new_partner_path, method: :get %>
+</div>
+
+<% @itineraries.each do |i| %>
+	<div class="col-xs-3 itinerary">
+	Trip: <%= link_to i.name, edit_itinerary_path(i) %> <br>
+	Origin: <%= i.origin %> <br>
+	Destination: <%= i.destination %> <br>
+	Departure Date: <%= i.departure %> <br>
+	Return Date: <%= i.return %><br>
+	<%= form_for i do %>
+
+	<%= button_to 'Delete Itinerary', itinerary_path(i), method: :delete %>
+	<%= button_to 'Add Waypoint', new_itinerary_waypoint_path(i), method: :get %>
+	<% end %>
+
+	<% i.waypoints.each do |w| %>
+	Location: <%= link_to w.location, edit_itinerary_waypoint_path(i,w) %> <br>
+	Name: <%= w.name %> <br>
+	Date: <%= w.date %> <br>
+	Partners: 
+	<br>
+	<% w.partners.each do |p| %>
+	<%= p.name %> <br>
+	<% end %>
+	<br><br>
+	<% end %>
+
+	</div>
+
+<% end %>
+
+
+

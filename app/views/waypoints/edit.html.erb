@@ -1,0 +1,23 @@
+<%= form_for [@itinerary, @waypoint], method: :put do |f| %>
+<%= f.text_field(:location, placeholder: 'Waypoint location', autofocus: true) %>
+<%= f.text_field(:name, placeholder: 'Waypoint name') %>
+<%= f.date_field(:date, placeholder: 'Date') %>
+<br>
+<% if @partners %>
+	Partners: <br>
+	
+<% for p in @partners %>
+	<%= f.check_box :partners, {checked: @waypoint.partners.include?(p), multiple: true}, p.id.to_i, nil %>
+	<%= p.name %>
+<% end %>
+<br>
+<% end %>
+<%= f.submit %>
+<% end %>
+
+<%= form_for [@itinerary, @waypoint], method: :delete do |f| %>
+<%= f.submit 'Delete Waypoint'%>
+<% end %>
+
+
+

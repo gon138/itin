@@ -1,0 +1,6 @@
+<%= form_for [@itinerary, @waypoint] do |f| %>
+<%= f.text_field(:location, placeholder: 'Waypoint location', autofocus: true) %>
+<%= f.text_field(:name, placeholder: 'Waypoint name') %>
+<%= f.date_field(:date, placeholder: 'Date') %>
+<%= f.submit %>
+<% end %>
