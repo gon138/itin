@@ -1,6 +1,10 @@
 class ModifyPartnerTable < ActiveRecord::Migration
-  def change
-  	add_column :partners, :name, :string
-  	add_column :partners, :gender, :string
-  end
+	def change
+		create_table :partners do |t|
+			t.string :name
+			t.string :gender
+
+			t.timestamps
+		end
+	end
 end
