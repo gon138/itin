@@ -226,7 +226,6 @@ DEPENDENCIES
   pry-rails
   quiet_assets
   rails (= 4.0.4)
-  rb-fsevent
   rspec-rails
   sass-rails (~> 4.0.2)
   sdoc
